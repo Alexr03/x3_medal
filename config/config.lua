@@ -6,7 +6,7 @@ TriggerActions = {
 Config = {}
 Config.LoggingLevel = 1
 
-Config.PublicKey = 'pub_NfbLvshDiIvEcpdPS9IwldCO4ssXp7Co'
+Config.PublicKey = ''
 
 Config.Commands = {
     ToggleUi = 'MedalUI', -- Command to toggle the Medal UI
