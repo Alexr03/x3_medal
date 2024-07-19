@@ -94,53 +94,5 @@ Config.Events = {
             Export = true,
             NetEvent = true
         }
-    },
-    Peering = {
-        EventId = 'peering',
-        EventName = 'Peering',
-        TriggerActions = { TriggerActions.SaveClip },
-        Defaults = {
-            ClipEnabled = true,
-            SoundEnabled = false
-        },
-        UISettings = {
-            Name = 'Peering (U)',
-            Description = 'Occurs when you peer behind the curtain',
-            Visible = true,
-            Order = 4
-        },
-        ClipOptions = {
-            PreLength = 5,
-            PostLength = 5
-        },
-        Tags = { 'Peering' },
-        Invokes = {
-            Export = true,
-            NetEvent = true
-        }
-    },
-    SABSBan = {
-        EventId = 'sabs_ban',
-        EventName = 'SABS Ban',
-        TriggerActions = { TriggerActions.SaveClip },
-        Defaults = {
-            ClipEnabled = true,
-            SoundEnabled = false
-        },
-        UISettings = {
-            Name = 'SABS Ban',
-            Description = '',
-            Visible = false,
-            Order = 0
-        },
-        ClipOptions = {
-            PreLength = 300,
-            PostLength = 0 -- If we add a POST length a clip will never occur since they would have been dropped from the server by this point
-        },
-        Tags = { 'sabs', 'ban' },
-        Invokes = {
-            Export = true,
-            NetEvent = true
-        }
-    },
+    }
 }
