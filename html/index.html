@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>x3 Medal Integration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="control-panel" class="control-panel animate__animated animate__fast">
+        <i id="close-btn" class="fas fa-rectangle-xmark" id="playerKilledClipping" onclick="closeUI()"></i>
+        <div class="logo-container background-gradient-animation">
+            <img src="https://cdn.medal.tv/assets/img/new-medal-logo-text.png" alt="Medal Logo">
+            <span>[x3] FiveM Integration</span>
+        </div>
+        <div id="status" class="status">
+            <span id="status-text" class="status-text">Error: Cannot connect to Medal</span>
+        </div>
+        <div id="events-container" class="events-container">
+            <!-- <div class="event">
+                <span class="event-title">Event Name</span>
+                <div class="event-actions">
+                    <div class="icon-toggle">
+                        <i class="fas fa-camera ${eventData.Settings.ClipEnabled ? 'active' : ''}"></i>
+                    </div>
+                    <div class="icon-toggle">
+                        <i class="fas fa-volume-up ${eventData.Settings.SoundEnabled ? 'active' : ''}"></i>
+                    </div>
+                </div>
+                <span class="event-description">Description of the event</span>
+            </div> -->
+        </div>
+
+        <button id="clip-now-btn" class="action-button background-gradient-animation"> <i class="fa-solid fa-video"></i>
+            Clip Now (30s)</button>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

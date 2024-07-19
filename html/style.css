@@ -1,0 +1,247 @@
+/* styles.css */
+
+:root {
+    --medal-gradient: linear-gradient(45deg, #9D6A1C, #A4670A, #BB750B, #875BCE, #8F5CE2, #BD47A2, #C53FA6);
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Courier New, sans-serif;
+    /* background: #121212; */
+}
+
+#close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.background-gradient-animation {
+    animation: background-gradient 15s ease infinite;
+}
+
+@keyframes background-gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+.control-panel {
+    position: fixed;
+    top: 20%;
+    right: 5px;
+    width: 400px;
+    height: 50%;
+    background: #161617;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: hidden;
+    opacity: 0.95 !important;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+/* Styling the scrollbar itself */
+*::-webkit-scrollbar {
+    width: 12px;
+    /* Scrollbar width */
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    /* Track color */
+    border-radius: 10px;
+    /* Rounded corners on the track */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* Thumb color */
+    border-radius: 10px;
+    /* Rounded corners on the thumb */
+    border: 3px solid #2e2e2e;
+    /* Creates a bit of border around the thumb */
+}
+
+/* Optional: dynamic effect on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+    /* Lighten thumb on hover */
+}
+
+.logo-container {
+    /* background: #9D6A1C; */
+    max-height: 80px;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+    background: var(--medal-gradient);
+    background-size: 400% 400%;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.logo-container span {
+    display: block;
+    padding-top: 1.5rem;
+    /* text-align: right; */
+    /* padding-right: 0px; */
+}
+
+.logo-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 300px;
+    top: 25%;
+    position: relative;
+}
+
+.gradient-bg {
+    background: var(--medal-gradient);
+    background-size: 400% 400%;
+    animation: background-gradient 15s ease infinite;
+    padding: 4px;
+    height: 100%;
+    width: 100%;
+}
+
+.status {
+    width: 100%;
+    height: 24px;
+    padding: 5px;
+    background: #1b049c;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+}
+
+.status.error {
+    background: #9c0404;
+}
+
+.status-text {
+    vertical-align: middle;
+}
+
+.events-container {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #161617;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    background: #111111;
+    flex: 1 1 40%;
+}
+
+.event-title {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    /* Center the titles for better alignment and visibility */
+}
+
+.event-actions {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.event-description {
+    display: none;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 12px;
+    max-height: 24px;
+    overflow-x: hidden;
+}
+
+.event:hover .event-description {
+    display: block;
+}
+
+.icon-toggle {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    /* Icon size */
+}
+
+.icon-toggle i {
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #fff;
+    opacity: 0.5;
+    transition: color .5s ease, opacity .5s ease;
+}
+
+.icon-toggle i.active {
+    color: #f5b33a;
+    /* Highlight color when active */
+    opacity: 1.0;
+}
+
+span {
+    font-size: 16px;
+    color: #fff;
+    /* Text color */
+}
+
+.action-button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    /* background-color: #7500b9; */
+    border: none;
+    cursor: pointer;
+    background: var(--medal-gradient);
+    background-size: 400% 400%;
+    transition: filter 0.3s;
+}
+
+.action-button:hover {
+    filter: brightness(80%);
+}
