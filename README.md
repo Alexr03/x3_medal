@@ -10,13 +10,7 @@ This CFX Resource adds Medal integration support for your server. (Only tested o
 ### `config.lua`
 You must setup some basic information first inside of the config file for Medal to correctly clip.
 
-1. Public Key
-   You must get a public key from [Medal](https://thirdpartyregister.pages.dev/). Once received add it into your config.
-```lua
-Config.PublicKey = 'pub_xyz'
-```
-
-2. Commands
+1. Commands
    You are free to leave these as default.
  ```lua
    Config.Commands = {
@@ -26,7 +20,7 @@ Config.PublicKey = 'pub_xyz'
 }
 ```
 
-3. Game Context
+2. Game Context
    This is needed so Medal can correctly link the clips you create to your FiveM server. You can also add global tags here too.
 ```lua
 -- https://docs.medal.tv/gameapi.html#submit-context
@@ -46,7 +40,7 @@ Config.GameContext = {
 }
 ```
 
-4. Defaults
+3. Defaults
    These are some defaults that are used in Events if you did not set one in the event itself.
 ```lua
 Config.Defaults = { -- Defaults that are used when a event is missing a value
